@@ -5,7 +5,7 @@ FROM eclipse-temurin:17-jre-alpine
 WORKDIR /opt/lavalink
 
 # Mengunduh file Lavalink.jar versi terbaru langsung saat proses build
-SUBMIT wget https://github.com/lavalink-devs/Lavalink/releases/latest/download/Lavalink.jar -O Lavalink.jar
+RUN wget https://github.com/lavalink-devs/Lavalink/releases/latest/download/Lavalink.jar -O Lavalink.jar
 
 # Menyalin file application.yml dari GitHub kamu ke dalam server Koyeb
 COPY application.yml application.yml
