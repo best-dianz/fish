@@ -4,6 +4,9 @@ FROM eclipse-temurin:17-jre-alpine
 # Membuat direktori kerja di dalam server virtual Koyeb
 WORKDIR /opt/lavalink
 
+# KODE BARU: Menginstal library libc6-compat dan libgcc yang dibutuhkan JDA-NAS
+RUN apk add --no-cache libc6-compat libgcc
+
 # Mengunduh file Lavalink.jar versi terbaru langsung saat proses build
 RUN wget https://github.com/lavalink-devs/Lavalink/releases/latest/download/Lavalink.jar -O Lavalink.jar
 
