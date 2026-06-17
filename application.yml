@@ -100,7 +100,7 @@ plugins:
         enabled: true
         oauth:
             enabled: true
-            refreshToken: null
+            refreshToken: ${yt_token}
             skipInitialization: false
         remoteCipher:
             url: https://cipher.kikkia.dev/
